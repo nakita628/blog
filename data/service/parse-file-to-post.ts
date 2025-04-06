@@ -1,9 +1,9 @@
 import type { Matter, Post } from '../../types'
-import { BASE_DIR } from '../constants'
 import { buildPost } from '../pure/build-post'
 import { relativeMd } from '../pure/relative-md'
 import path from 'node:path'
 import { getMatter } from './get-matter'
+import { BASE_DIR } from '../constants'
 
 /**
  * parseFileToPost
