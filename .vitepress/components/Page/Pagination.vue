@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref, computed } from 'vue'
-import type { Post } from '../../../types'
+import type { Post } from '../../types'
 import Posts from '../Posts/Posts.vue'
 
 /* props */

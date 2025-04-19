@@ -4,7 +4,7 @@ import { ref } from 'vue'
 
 import { getPosts } from './hooks/postsHooks'
 import Pagination from './Page/Pagination.vue'
-import type { Post } from '../../types';
+import type { Post } from '../types';
 
 
 const props = defineProps({
