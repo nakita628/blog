@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { getTags } from "./hooks";
+import { getTags } from "../hooks";
 
 const tags = getTags();
 </script>

@@ -1,4 +1,4 @@
-import type { Post } from '../../types'
+import type { Post } from '../types'
 
 // POSTS
 declare const __POSTS__: Post[]

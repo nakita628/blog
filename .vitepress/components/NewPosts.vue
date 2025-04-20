@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { getNewPosts } from "./hooks";
+import { getNewPosts } from "../hooks";
 import Posts from "./Posts/Posts.vue";
 
 const new_posts = getNewPosts(3);

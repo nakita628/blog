@@ -2,7 +2,7 @@
 import type { Ref } from "vue";
 import { ref } from "vue";
 
-import { getPosts } from "./hooks/postsHooks";
+import { getPosts } from "../hooks/postsHooks";
 import Pagination from "./Page/Pagination.vue";
 import type { Post } from "../types";
 
