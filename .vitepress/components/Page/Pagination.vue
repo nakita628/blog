@@ -1,43 +1,41 @@
 <script lang="ts" setup>
-import { ref, computed } from "vue";
-import type { Post } from "../../types";
-import Posts from "../Posts/Posts.vue";
+import { ref, computed } from 'vue';
+import type { Post } from '../../types';
+import Posts from '../Posts/Posts.vue';
 
 /* props */
 const { posts, baseUrl, page } = defineProps<{
-	posts: Post[];
-	baseUrl: string;
-	page: number;
+  posts: Post[];
+  baseUrl: string;
+  page: number;
 }>();
 
-/* state  */
 const PER_PAGE = 20;
-const current = ref(page || 1);
-const asc = ref(true); // sort order
 
-/* view posts (sort + paginate)  */
+/* state */
+const current = ref(page || 1);
+const asc = ref(false);
+/* view posts (sort + paginate) */
 const viewPosts = computed(() =>
-	[...posts]
-		.sort(
-			(a, b) =>
-				asc.value
-					? +new Date(a.date) - +new Date(b.date) // Asc
-					: +new Date(b.date) - +new Date(a.date), // Desc
-		)
-		.slice((current.value - 1) * PER_PAGE, current.value * PER_PAGE),
+  [...posts]
+    .sort((a, b) =>
+      asc.value
+        ? +new Date(a.date) - +new Date(b.date)
+        : +new Date(b.date) - +new Date(a.date)
+    )
+    .slice((current.value - 1) * PER_PAGE, current.value * PER_PAGE)
 );
 
-/* total pages */
 const total = computed(() => Math.ceil(posts.length / PER_PAGE));
-
-/* helper */
 const pageLink = (p: number) => `${baseUrl}/page/${p}`;
 </script>
 
 <template>
   <!-- Sort toggle -->
-  <div class="flex justify-center">
-    <a class="!no-underline" @click="asc = !asc">Sort By Date {{ asc ? 'Asc' : 'Desc' }}</a>
+  <div class="flex justify-center mb-4">
+    <a class="!no-underline" @click="asc = !asc">
+      Sort By Date {{ asc ? 'Desc' : 'Asc' }}
+    </a>
   </div>
 
   <!-- Posts -->
