@@ -40,6 +40,12 @@ export default withMermaid(
         __TAGS__: tags,
       },
       plugins: [groupIconVitePlugin()],
+      optimizeDeps: {
+        include: ['vitepress-plugin-tabs'],
+      },
+      ssr: {
+        noExternal: ['vitepress-plugin-tabs'],
+      },
     },
     themeConfig: {
       // https://vitepress.dev/reference/default-theme-config
