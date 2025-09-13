@@ -3,8 +3,8 @@ import { defineConfig } from 'vitepress'
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
-import { postsAction } from './data/actions/posts-action'
-import { tagsAction } from './data/actions/tags-action'
+import { postsAction } from './data/actions/postsAction'
+import { tagsAction } from './data/actions/tagsAction'
 import type { Post } from './types'
 
 // posts
