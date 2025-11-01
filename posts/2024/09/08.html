@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Yarn Prisma | N Akita's Blog</title>
+    <meta name="description" content="Yarn Prisma">
+    <meta name="generator" content="VitePress v1.6.4">
+    <link rel="preload stylesheet" href="/blog/assets/style.BrX07OXk.css" as="style">
+    <link rel="preload stylesheet" href="/blog/vp-icons.css" as="style">
+    
+    <script type="module" src="/blog/assets/app.Bb-F0Cn4.js"></script>
+    <link rel="preload" href="/blog/assets/inter-roman-latin.Di8DUHzh.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="/blog/assets/chunks/framework.CbZ0TyXs.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/theme.DZq1GCnP.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/katex.BbEIqZs1.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/dagre-6UL2VRFP.D-YSOVAG.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/cose-bilkent-S5V4N54A.BqM8YCky.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/c4Diagram-YG6GDRKO.q6bkLwpt.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/flowDiagram-NV44I4VS.-Ey7KAfV.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/erDiagram-Q2GNP2WA.CJgqFb2F.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/gitGraphDiagram-NY62KEGX.iVZpcKEu.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/ganttDiagram-LVOFAZNH.CY6gaaH8.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/infoDiagram-ER5ION4S.NRtUpBGL.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/pieDiagram-ADFJNKIX.DwBC7yuw.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/quadrantDiagram-AYHSOK5B.BrQZKJJp.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/xychartDiagram-PRI3JC2R.DLoOUP-B.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/requirementDiagram-UZGBJVZJ.BqXW8XoQ.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/sequenceDiagram-WL72ISMW.D-LOuLeH.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/classDiagram-2ON5EDUG.cYv87b8H.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/classDiagram-v2-WZHVMYZB.cYv87b8H.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/stateDiagram-FKZM4ZOC.DMkOazyW.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/stateDiagram-v2-4FDKWEC3.4WpEt32j.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/journeyDiagram-XKPGCS4Q.7uPtrvUB.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/timeline-definition-IT6M3QCI.RtRXqM8r.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/mindmap-definition-VGOIOE7T.c4HvBlNH.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/kanban-definition-3W4ZIXB7.euWg8f3E.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/sankeyDiagram-TZEHDZUN.Bj82Y7br.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/diagram-S2PKOQOG.D5tXznb1.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/diagram-QEK2KX5R.L5tnYkb3.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/blockDiagram-VD42YOAC.iOXtOVYo.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/architectureDiagram-VXUJARFQ.pk57rpyj.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/diagram-PSM6KHXK.DgJ0cXk-.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/virtual_mermaid-config.DDnGl6nM.js">
+    <link rel="modulepreload" href="/blog/assets/posts_2024_09_08.md.vWJQMugd.lean.js">
+    <link rel="icon" type="image/svg+xml" href="n.svg">
+    <script id="check-dark-mode">document.documentElement.classList.add("dark");</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+  </head>
+  <body>
+    <div id="app"><div class="Layout" data-v-d8b57b2d><!--[--><!--]--><!--[--><span tabindex="-1" data-v-fcbfc0e0></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-fcbfc0e0>Skip to content</a><!--]--><!----><header class="VPNav" data-v-d8b57b2d data-v-7ad780c2><div class="VPNavBar" data-v-7ad780c2 data-v-9fd4d1dd><div class="wrapper" data-v-9fd4d1dd><div class="container" data-v-9fd4d1dd><div class="title" data-v-9fd4d1dd><div class="VPNavBarTitle has-sidebar" data-v-9fd4d1dd data-v-9f43907a><a class="title" href="/blog/" data-v-9f43907a><!--[--><!--]--><!----><span data-v-9f43907a>N Akita&#39;s Blog</span><!--[--><!--]--></a></div></div><div class="content" data-v-9fd4d1dd><div class="content-body" data-v-9fd4d1dd><!--[--><!--]--><div class="VPNavBarSearch search" data-v-9fd4d1dd><!--[--><!----><div id="local-search"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search"><span class="DocSearch-Button-Container"><span class="vp-icon DocSearch-Search-Icon"></span><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"><kbd class="DocSearch-Button-Key"></kbd><kbd class="DocSearch-Button-Key">K</kbd></span></button></div><!--]--></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-9fd4d1dd data-v-afb2845e><span id="main-nav-aria-label" class="visually-hidden" data-v-afb2845e> Main Navigation </span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/blog/" tabindex="0" data-v-afb2845e data-v-815115f5><!--[--><span data-v-815115f5>Home</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/blog/about.html" tabindex="0" data-v-afb2845e data-v-815115f5><!--[--><span data-v-815115f5>About</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/blog/posts/page/1.html" tabindex="0" data-v-afb2845e data-v-815115f5><!--[--><span data-v-815115f5>Posts</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/blog/tags.html" tabindex="0" data-v-afb2845e data-v-815115f5><!--[--><span data-v-815115f5>Tags</span><!--]--></a><!--]--><!--]--></nav><!----><!----><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-9fd4d1dd data-v-ef6192dc data-v-e71e869c><!--[--><a class="VPSocialLink no-icon" href="https://github.com/nakita628" aria-label="github" target="_blank" rel="noopener" data-v-e71e869c data-v-60a9a2d3><span class="vpi-social-github"></span></a><a class="VPSocialLink no-icon" href="https://www.npmjs.com/~n_akita" aria-label="npm" target="_blank" rel="noopener" data-v-e71e869c data-v-60a9a2d3><span class="vpi-social-npm"></span></a><a class="VPSocialLink no-icon" href="https://x.com/mini_bg_pro_N" aria-label="x" target="_blank" rel="noopener" data-v-e71e869c data-v-60a9a2d3><span class="vpi-social-x"></span></a><a class="VPSocialLink no-icon" href="https://bsky.app/profile/mini-bg-pro-n.bsky.social" aria-label="bluesky" target="_blank" rel="noopener" data-v-e71e869c data-v-60a9a2d3><span class="vpi-social-bluesky"></span></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-9fd4d1dd data-v-f953d92f data-v-bfe7971f><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-bfe7971f><span class="vpi-more-horizontal icon" data-v-bfe7971f></span></button><div class="menu" data-v-bfe7971f><div class="VPMenu" data-v-bfe7971f data-v-20ed86d6><!----><!--[--><!--[--><!----><!----><div class="group" data-v-f953d92f><div class="item social-links" data-v-f953d92f><div class="VPSocialLinks social-links-list" data-v-f953d92f data-v-e71e869c><!--[--><a class="VPSocialLink no-icon" href="https://github.com/nakita628" aria-label="github" target="_blank" rel="noopener" data-v-e71e869c data-v-60a9a2d3><span class="vpi-social-github"></span></a><a class="VPSocialLink no-icon" href="https://www.npmjs.com/~n_akita" aria-label="npm" target="_blank" rel="noopener" data-v-e71e869c data-v-60a9a2d3><span class="vpi-social-npm"></span></a><a class="VPSocialLink no-icon" href="https://x.com/mini_bg_pro_N" aria-label="x" target="_blank" rel="noopener" data-v-e71e869c data-v-60a9a2d3><span class="vpi-social-x"></span></a><a class="VPSocialLink no-icon" href="https://bsky.app/profile/mini-bg-pro-n.bsky.social" aria-label="bluesky" target="_blank" rel="noopener" data-v-e71e869c data-v-60a9a2d3><span class="vpi-social-bluesky"></span></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-9fd4d1dd data-v-6bee1efd><span class="container" data-v-6bee1efd><span class="top" data-v-6bee1efd></span><span class="middle" data-v-6bee1efd></span><span class="bottom" data-v-6bee1efd></span></span></button></div></div></div></div><div class="divider" data-v-9fd4d1dd><div class="divider-line" data-v-9fd4d1dd></div></div></div><!----></header><div class="VPLocalNav has-sidebar empty" data-v-d8b57b2d data-v-2488c25a><div class="container" data-v-2488c25a><button class="menu" aria-expanded="false" aria-controls="VPSidebarNav" data-v-2488c25a><span class="vpi-align-left menu-icon" data-v-2488c25a></span><span class="menu-text" data-v-2488c25a>Menu</span></button><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-2488c25a data-v-6b867909><button data-v-6b867909>Return to top</button><!----></div></div></div><aside class="VPSidebar" data-v-d8b57b2d data-v-42c4c606><div class="curtain" data-v-42c4c606></div><nav class="nav" id="VPSidebarNav" aria-labelledby="sidebar-aria-label" tabindex="-1" data-v-42c4c606><span class="visually-hidden" id="sidebar-aria-label" data-v-42c4c606> Sidebar Navigation </span><!--[--><!--]--><!--[--><div class="no-transition group" data-v-51288d80><section class="VPSidebarItem level-0" data-v-51288d80 data-v-0009425e><!----><div class="items" data-v-0009425e><!--[--><div class="VPSidebarItem level-1 is-link" data-v-0009425e data-v-0009425e><div class="item" data-v-0009425e><div class="indicator" data-v-0009425e></div><a class="VPLink link link" href="/blog/" data-v-0009425e><!--[--><p class="text" data-v-0009425e>Home</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-0009425e data-v-0009425e><div class="item" data-v-0009425e><div class="indicator" data-v-0009425e></div><a class="VPLink link link" href="/blog/about.html" data-v-0009425e><!--[--><p class="text" data-v-0009425e>About</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-0009425e data-v-0009425e><div class="item" data-v-0009425e><div class="indicator" data-v-0009425e></div><a class="VPLink link link" href="/blog/posts/page/1.html" data-v-0009425e><!--[--><p class="text" data-v-0009425e>Posts</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-0009425e data-v-0009425e><div class="item" data-v-0009425e><div class="indicator" data-v-0009425e></div><a class="VPLink link link" href="/blog/tags.html" data-v-0009425e><!--[--><p class="text" data-v-0009425e>Tags</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><!--]--><!--[--><!--]--></nav></aside><div class="VPContent has-sidebar" id="VPContent" data-v-d8b57b2d data-v-9a6c75ad><div class="VPDoc has-sidebar has-aside" data-v-9a6c75ad data-v-e6f2a212><!--[--><!--]--><div class="container" data-v-e6f2a212><div class="aside" data-v-e6f2a212><div class="aside-curtain" data-v-e6f2a212></div><div class="aside-container" data-v-e6f2a212><div class="aside-content" data-v-e6f2a212><div class="VPDocAside" data-v-e6f2a212 data-v-cb998dce><!--[--><!--]--><!--[--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" data-v-cb998dce data-v-f610f197><div class="content" data-v-f610f197><div class="outline-marker" data-v-f610f197></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-f610f197>On this page</div><ul class="VPDocOutlineItem root" data-v-f610f197 data-v-53c99d69><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-cb998dce></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-e6f2a212><div class="content-container" data-v-e6f2a212><!--[--><!--]--><main class="main" data-v-e6f2a212><div style="position:relative;" class="vp-doc _blog_posts_2024_09_08" data-v-e6f2a212><div><h1 id="yarn-prisma" tabindex="-1">Yarn Prisma <a class="header-anchor" href="#yarn-prisma" aria-label="Permalink to &quot;Yarn Prisma&quot;">​</a></h1><h2 id="directory-structure" tabindex="-1">Directory Structure <a class="header-anchor" href="#directory-structure" aria-label="Permalink to &quot;Directory Structure&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>.</span></span>
+<span class="line"><span>|-- package.json</span></span>
+<span class="line"><span>|-- prisma</span></span>
+<span class="line"><span>|   |-- dev.db</span></span>
+<span class="line"><span>|   |-- dev.db-journal</span></span>
+<span class="line"><span>|   |-- migrations</span></span>
+<span class="line"><span>|   |   |-- *_init</span></span>
+<span class="line"><span>|   |   |   `-- migration.sql</span></span>
+<span class="line"><span>|   |   `-- migration_lock.toml</span></span>
+<span class="line"><span>|   `-- schema.prisma</span></span>
+<span class="line"><span>|-- src</span></span>
+<span class="line"><span>|   `-- index.ts</span></span>
+<span class="line"><span>`-- tsconfig.json</span></span></code></pre></div><div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-ZMsNH" id="tab-kLlYPaM" checked><label data-title="yarn" for="tab-kLlYPaM">yarn</label></div><div class="blocks"><div class="language-sh vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">yarn</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> add</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> prisma</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> --dev</span></span></code></pre></div></div></div><div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-10H8l" id="tab-SwaBfHH" checked><label data-title="yarn" for="tab-SwaBfHH">yarn</label></div><div class="blocks"><div class="language-sh vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">yarn</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> add</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> @prisma/client</span></span></code></pre></div></div></div><div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-6FTnQ" id="tab-2pZ863v" checked><label data-title=".env" for="tab-2pZ863v">.env</label></div><div class="blocks"><div class="language-sh vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">DATABASE_URL</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;file:./dev.db&quot;</span></span></code></pre></div></div></div><h2 id="schema-prisma作成" tabindex="-1"><code>schema.prisma</code>作成 <a class="header-anchor" href="#schema-prisma作成" aria-label="Permalink to &quot;`schema.prisma`作成&quot;">​</a></h2><div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-B3ZUh" id="tab-Uf2ZK0A" checked><label data-title="yarn" for="tab-Uf2ZK0A">yarn</label></div><div class="blocks"><div class="language-sh vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">yarn</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> prisma</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> init</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> --datasource-provider</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> sqlite</span></span></code></pre></div></div></div><h2 id="migrate" tabindex="-1">Migrate <a class="header-anchor" href="#migrate" aria-label="Permalink to &quot;Migrate&quot;">​</a></h2><div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-coHry" id="tab-OoqP_s5" checked><label data-title="yarn" for="tab-OoqP_s5">yarn</label></div><div class="blocks"><div class="language-sh vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">yarn</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> prisma</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> migrate</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> dev</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> init</span></span></code></pre></div></div></div><div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-Zbd6W" id="tab-dg3RrPx" checked><label data-title="src/index.ts" for="tab-dg3RrPx">src/index.ts</label></div><div class="blocks"><div class="language-ts vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> { PrismaClient } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &#39;@prisma/client&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> prisma</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> PrismaClient</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> deleteUsers</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> async</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> () </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=&gt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">  await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> prisma.user.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">deleteMany</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">deleteUsers</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> createUsers</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> async</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> () </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=&gt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">  await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> prisma.user.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">createMany</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">({</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    data: [</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">      {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        id: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        name: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;prisma&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        email: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;prisma@email.com&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">      },</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">      {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        id: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        name: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;drizzle&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        email: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;drizzle@email.com&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">      },</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">      {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        id: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        name: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;typeorm&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        email: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;typeorm@email.com&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">      },</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    ],</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  })</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> main</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> async</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> () </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=&gt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">  await</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> createUsers</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">  const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> users</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> prisma.user.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">findMany</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(users)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">main</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">catch</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">((</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">e</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=&gt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">error</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(e)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    process.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">exit</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  })</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">finally</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">async</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> () </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=&gt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> prisma.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">$disconnect</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  })</span></span></code></pre></div></div></div><h2 id="execution" tabindex="-1">Execution <a class="header-anchor" href="#execution" aria-label="Permalink to &quot;Execution&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>[</span></span>
+<span class="line"><span>  { id: 1, email: &#39;prisma@email.com&#39;, name: &#39;prisma&#39; },</span></span>
+<span class="line"><span>  { id: 2, email: &#39;drizzle@email.com&#39;, name: &#39;drizzle&#39; },</span></span>
+<span class="line"><span>  { id: 3, email: &#39;typeorm@email.com&#39;, name: &#39;typeorm&#39; }</span></span>
+<span class="line"><span>]</span></span></code></pre></div><h2 id="mermaid" tabindex="-1">Mermaid <a class="header-anchor" href="#mermaid" aria-label="Permalink to &quot;Mermaid&quot;">​</a></h2><ul><li><a href="https://github.com/keonik/prisma-erd-generator" target="_blank" rel="noreferrer">prisma-erd-generator </a></li></ul><div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-j2u-w" id="tab-kBo8lrd" checked><label data-title="yarn" for="tab-kBo8lrd">yarn</label></div><div class="blocks"><div class="language-sh vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">yarn</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> add</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> -D</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> prisma-erd-generator</span></span></code></pre></div></div></div><div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-NHCCc" id="tab-SVK5N7U" checked><label data-title="prisma/schema.prisma" for="tab-SVK5N7U">prisma/schema.prisma</label><input type="radio" name="group-NHCCc" id="tab-bzVxUON"><label data-title="mermaid" for="tab-bzVxUON">mermaid</label></div><div class="blocks"><div class="language-prisma vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">prisma</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">generator</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> client</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  provider </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;prisma-client-js&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">datasource</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> db</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  provider </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;sqlite&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  url      </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> env</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;DATABASE_URL&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">generator</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> erd</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  provider </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;prisma-erd-generator&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  output   </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;er.md&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> User</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  id        </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">        @id</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">autoincrement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  email     </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">     @unique</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  name      </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  profile   </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Profile</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  posts     </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Post</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  comments  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Comment</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  roles     </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">UserRole</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  createdAt </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">DateTime</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">   @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">now</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  updatedAt </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">DateTime</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">   @updatedAt</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Profile</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  id     </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">     @id</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">autoincrement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  bio    </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  userId </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">     @unique</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  user   </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">User</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    @relation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">fields</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">userId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">], </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">references</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">])</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Post</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  id         </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">        @id</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">autoincrement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  title      </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  content    </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  published  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Boolean</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">false</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  authorId   </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  author     </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">User</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">       @relation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">fields</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">authorId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">], </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">references</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">])</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  categories </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Category</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  comments   </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Comment</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  tags       </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Tag</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  createdAt  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">DateTime</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">   @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">now</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  updatedAt  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">DateTime</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">   @updatedAt</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Comment</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  id        </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">      @id</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">autoincrement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  content   </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  postId    </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  post      </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Post</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">     @relation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">fields</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">postId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">], </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">references</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">])</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  authorId  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  author    </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">User</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">     @relation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">fields</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">authorId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">], </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">references</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">])</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  createdAt </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">DateTime</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">now</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  updatedAt </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">DateTime</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @updatedAt</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Category</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  id    </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    @id</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">autoincrement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  name  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @unique</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  posts </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Post</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Tag</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  id    </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    @id</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">autoincrement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  name  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @unique</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  posts </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Post</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Role</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  id    </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">        @id</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">autoincrement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  name  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">     @unique</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  users </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">UserRole</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> UserRole</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  userId </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  roleId </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  user   </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">User</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @relation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">fields</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">userId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">], </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">references</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">])</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  role   </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Role</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @relation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">fields</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">roleId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">], </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">references</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">])</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">  @@id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">([</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">userId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">roleId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">])</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></div><div class="language-mmd vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">mmd</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">erDiagram</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  &quot;User&quot; {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    Int id &quot;🗝️&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    String email </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    String name &quot;❓&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    DateTime createdAt </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    DateTime updatedAt </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  </span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  &quot;Profile&quot; {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    Int id &quot;🗝️&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    String bio &quot;❓&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  </span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  &quot;Post&quot; {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    Int id &quot;🗝️&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    String title </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    String content &quot;❓&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    Boolean published </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    DateTime createdAt </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    DateTime updatedAt </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  </span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  &quot;Comment&quot; {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    Int id &quot;🗝️&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    String content </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    DateTime createdAt </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    DateTime updatedAt </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  </span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  &quot;Category&quot; {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    Int id &quot;🗝️&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    String name </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  </span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  &quot;Tag&quot; {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    Int id &quot;🗝️&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    String name </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  </span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  &quot;Role&quot; {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    Int id &quot;🗝️&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    String name </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  </span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  &quot;UserRole&quot; {</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &quot;User&quot; o{--}o &quot;Profile&quot; : &quot;profile&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &quot;User&quot; o{--}o &quot;Post&quot; : &quot;posts&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &quot;User&quot; o{--}o &quot;Comment&quot; : &quot;comments&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &quot;User&quot; o{--}o &quot;UserRole&quot; : &quot;roles&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &quot;Profile&quot; o|--|| &quot;User&quot; : &quot;user&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &quot;Post&quot; o|--|| &quot;User&quot; : &quot;author&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &quot;Post&quot; o{--}o &quot;Category&quot; : &quot;categories&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &quot;Post&quot; o{--}o &quot;Comment&quot; : &quot;comments&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &quot;Post&quot; o{--}o &quot;Tag&quot; : &quot;tags&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &quot;Comment&quot; o|--|| &quot;Post&quot; : &quot;post&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &quot;Comment&quot; o|--|| &quot;User&quot; : &quot;author&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &quot;Category&quot; o{--}o &quot;Post&quot; : &quot;posts&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &quot;Tag&quot; o{--}o &quot;Post&quot; : &quot;posts&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &quot;Role&quot; o{--}o &quot;UserRole&quot; : &quot;users&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &quot;UserRole&quot; o|--|| &quot;User&quot; : &quot;user&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &quot;UserRole&quot; o|--|| &quot;Role&quot; : &quot;role&quot;</span></span></code></pre></div></div></div><h2 id="generate" tabindex="-1">Generate <a class="header-anchor" href="#generate" aria-label="Permalink to &quot;Generate&quot;">​</a></h2><div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-lmlte" id="tab-gFfaNV1" checked><label data-title="yarn" for="tab-gFfaNV1">yarn</label></div><div class="blocks"><div class="language-sh vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">yarn</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> prisma</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> generate</span></span></code></pre></div></div></div><div class="mermaid"></div><h2 id="plantuml" tabindex="-1">PlantUML <a class="header-anchor" href="#plantuml" aria-label="Permalink to &quot;PlantUML&quot;">​</a></h2><ul><li><a href="https://github.com/dbgso/prisma-generator-plantuml-erd/tree/main/packages/generator" target="_blank" rel="noreferrer">prisma-generator-plantuml-erd</a></li></ul><div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-pS9z6" id="tab-DBauILL" checked><label data-title="yarn" for="tab-DBauILL">yarn</label></div><div class="blocks"><div class="language-sh vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">yarn</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> add</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> -D</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> prisma-generator-plantuml-erd</span></span></code></pre></div></div></div><div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-lY9nr" id="tab-0ZKzr9Q" checked><label data-title="prisma/schema.prisma" for="tab-0ZKzr9Q">prisma/schema.prisma</label><input type="radio" name="group-lY9nr" id="tab-Fqzipgv"><label data-title="plantuml" for="tab-Fqzipgv">plantuml</label></div><div class="blocks"><div class="language-prisma vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">prisma</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// This is your Prisma schema file,</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// learn more about it in the docs: https://pris.ly/d/prisma-schema</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">generator</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> client</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  provider </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;prisma-client-js&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">datasource</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> db</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  provider </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;sqlite&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  url      </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> env</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;DATABASE_URL&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">generator</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> erd_plantuml</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  provider                   </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;prisma-generator-plantuml-erd&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  output                     </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;erd.puml&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  showUniqueKeyLabel         </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> true</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  isShowForeignKeyOnRelation </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> true</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> User</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  id        </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">        @id</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">autoincrement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  email     </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">     @unique</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  name      </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  profile   </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Profile</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  posts     </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Post</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  comments  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Comment</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  roles     </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">UserRole</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  createdAt </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">DateTime</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">   @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">now</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  updatedAt </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">DateTime</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">   @updatedAt</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Profile</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  id     </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">     @id</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">autoincrement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  bio    </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  userId </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">     @unique</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  user   </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">User</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    @relation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">fields</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">userId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">], </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">references</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">])</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Post</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  id         </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">        @id</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">autoincrement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  title      </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  content    </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  published  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Boolean</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">false</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  authorId   </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  author     </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">User</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">       @relation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">fields</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">authorId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">], </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">references</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">])</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  categories </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Category</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  comments   </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Comment</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  tags       </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Tag</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  createdAt  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">DateTime</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">   @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">now</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  updatedAt  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">DateTime</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">   @updatedAt</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Comment</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  id        </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">      @id</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">autoincrement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  content   </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  postId    </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  post      </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Post</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">     @relation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">fields</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">postId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">], </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">references</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">])</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  authorId  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  author    </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">User</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">     @relation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">fields</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">authorId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">], </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">references</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">])</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  createdAt </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">DateTime</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">now</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  updatedAt </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">DateTime</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @updatedAt</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Category</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  id    </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    @id</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">autoincrement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  name  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @unique</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  posts </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Post</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Tag</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  id    </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    @id</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">autoincrement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  name  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @unique</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  posts </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Post</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Role</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  id    </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">        @id</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">autoincrement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  name  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">     @unique</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  users </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">UserRole</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> UserRole</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  userId </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  roleId </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  user   </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">User</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @relation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">fields</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">userId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">], </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">references</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">])</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  role   </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Role</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @relation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">fields</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">roleId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">], </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">references</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">])</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">  @@id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">([</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">userId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">roleId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">])</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></div><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>@startuml erd</span></span>
+<span class="line"><span>skinparam linetype ortho</span></span>
+<span class="line"><span>entity &quot;User&quot; as User {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * email : [UK] String</span></span>
+<span class="line"><span>  name : String</span></span>
+<span class="line"><span>  * createdAt : DateTime</span></span>
+<span class="line"><span>  * updatedAt : DateTime</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Profile&quot; as Profile {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  bio : String</span></span>
+<span class="line"><span>  # userId : [UK] [FK] User</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Post&quot; as Post {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * title : String</span></span>
+<span class="line"><span>  content : String</span></span>
+<span class="line"><span>  * published : Boolean</span></span>
+<span class="line"><span>  # authorId : [FK] User</span></span>
+<span class="line"><span>  * createdAt : DateTime</span></span>
+<span class="line"><span>  * updatedAt : DateTime</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Comment&quot; as Comment {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * content : String</span></span>
+<span class="line"><span>  # postId : [FK] Post</span></span>
+<span class="line"><span>  # authorId : [FK] User</span></span>
+<span class="line"><span>  * createdAt : DateTime</span></span>
+<span class="line"><span>  * updatedAt : DateTime</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Category&quot; as Category {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * name : [UK] String</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Tag&quot; as Tag {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * name : [UK] String</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Role&quot; as Role {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * name : [UK] String</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;UserRole&quot; as UserRole {</span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  # userId : [FK] User</span></span>
+<span class="line"><span>  # roleId : [FK] Role</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&#39; Relations</span></span>
+<span class="line"><span>Profile |o--|| User: userId</span></span>
+<span class="line"><span>Post }o--|| User: authorId</span></span>
+<span class="line"><span>Comment }o--|| Post: postId</span></span>
+<span class="line"><span>Comment }o--|| User: authorId</span></span>
+<span class="line"><span>UserRole }o--|| User: userId</span></span>
+<span class="line"><span>UserRole }o--|| Role: roleId</span></span>
+<span class="line"><span>&#39; ManyToMany Relations</span></span>
+<span class="line"><span>Post }o--o{ Category</span></span>
+<span class="line"><span>Post }o--o{ Tag</span></span>
+<span class="line"><span>&#39; enum relations</span></span>
+<span class="line"><span>@enduml</span></span></code></pre></div></div></div><h2 id="generate-1" tabindex="-1">Generate <a class="header-anchor" href="#generate-1" aria-label="Permalink to &quot;Generate&quot;">​</a></h2><div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-SOpfk" id="tab-aVSg41Z" checked><label data-title="yarn" for="tab-aVSg41Z">yarn</label></div><div class="blocks"><div class="language-sh vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">yarn</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> prisma</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> generate</span></span></code></pre></div></div></div><img src="https://www.plantuml.com/plantuml/svg/jPJDRi8m3CVlUGeB3fEO-W8ziGzDGjCanE24TWZKWsZvg9BqK07lFYUafMMC0zCkgMF7__piM1qxpwslb6JkI-YIMwv02es-BX6CzLl3K7lXQnWi7De1S0V1W1sx1r70Slhw0JbCj0UMPGnW1AYuaEHRBYZqxgtG6_9hhf2SxNu4QulSO_7WoVrCrbmeZ86gB7u63gm5cLhpAIH6bcJ_YhCIfdlh42g2dnGDtlA5bb1FJzyuVnGduqgXT5hsQbeRxKcaNsPPhQHmMmntFXeZaUi8mYjgRa9fAVxKboUZ5DaHFTbNw2_03g6aYaz8eVx_OYNVnjZw29isLsZJ-7HdggCsvvieHD-RDMOcZLGmRbO9dMcLcWsfnUJkz7NQE0HBXqxka18qxs26adjXj6FDdEzDbkttCJDFQYoEwQ4RQDwBDMEGek5adXxvF7QMsR8VBjnu7WnsdgeWx3Ukwxa9QxU2XjBisWVlEUdnA1TrfS2sMMFK1VsTlW40" alt="erd"><h2 id="md" tabindex="-1">Md <a class="header-anchor" href="#md" aria-label="Permalink to &quot;Md&quot;">​</a></h2><div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-BQMZ1" id="tab-TCt8XIv" checked><label data-title="prisma/schema.prisma" for="tab-TCt8XIv">prisma/schema.prisma</label></div><div class="blocks"><div class="language-prisma vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">prisma</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// This is your Prisma schema file,</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// learn more about it in the docs: https://pris.ly/d/prisma-schema</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">generator</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> client</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  provider </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;prisma-client-js&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">datasource</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> db</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  provider </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;sqlite&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  url      </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> env</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;DATABASE_URL&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">generator</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> erd</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  provider </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;prisma-erd-generator&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  output   </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;er.md&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">generator</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> erd_plantuml</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  provider                   </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;prisma-generator-plantuml-erd&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  exportPerTables            </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> true</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  showUniqueKeyLabel         </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> true</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  isShowForeignKeyOnRelation </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> true</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  markdownOutput             </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;./example-tables.md&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  markdownIncludeERD         </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> true</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> User</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  id        </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">        @id</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">autoincrement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  email     </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">     @unique</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  name      </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  profile   </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Profile</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  posts     </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Post</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  comments  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Comment</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  roles     </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">UserRole</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  createdAt </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">DateTime</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">   @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">now</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  updatedAt </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">DateTime</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">   @updatedAt</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Profile</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  id     </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">     @id</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">autoincrement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  bio    </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  userId </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">     @unique</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  user   </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">User</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    @relation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">fields</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">userId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">], </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">references</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">])</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Post</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  id         </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">        @id</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">autoincrement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  title      </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  content    </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  published  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Boolean</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">false</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  authorId   </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  author     </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">User</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">       @relation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">fields</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">authorId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">], </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">references</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">])</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  categories </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Category</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  comments   </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Comment</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  tags       </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Tag</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  createdAt  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">DateTime</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">   @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">now</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  updatedAt  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">DateTime</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">   @updatedAt</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Comment</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  id        </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">      @id</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">autoincrement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  content   </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  postId    </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  post      </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Post</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">     @relation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">fields</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">postId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">], </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">references</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">])</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  authorId  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  author    </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">User</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">     @relation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">fields</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">authorId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">], </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">references</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">])</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  createdAt </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">DateTime</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">now</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  updatedAt </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">DateTime</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @updatedAt</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Category</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  id    </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    @id</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">autoincrement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  name  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @unique</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  posts </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Post</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Tag</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  id    </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">    @id</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">autoincrement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  name  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @unique</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  posts </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Post</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Role</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  id    </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">        @id</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">autoincrement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">())</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  name  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">String</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">     @unique</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  users </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">UserRole</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">model</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> UserRole</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  userId </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  roleId </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Int</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  user   </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">User</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @relation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">fields</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">userId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">], </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">references</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">])</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  role   </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Role</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> @relation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">fields</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">roleId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">], </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">references</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">])</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">  @@id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">([</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">userId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">roleId</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">])</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></div></div></div><h2 id="generate-2" tabindex="-1">Generate <a class="header-anchor" href="#generate-2" aria-label="Permalink to &quot;Generate&quot;">​</a></h2><div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-SFHij" id="tab-iNp56hS" checked><label data-title="yarn" for="tab-iNp56hS">yarn</label></div><div class="blocks"><div class="language-sh vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">yarn</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> prisma</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> generate</span></span></code></pre></div></div></div><details class="details custom-block"><summary>Generated Md</summary><h1 id="tables" tabindex="-1">Tables <a class="header-anchor" href="#tables" aria-label="Permalink to &quot;Tables&quot;">​</a></h1><ul><li><a href="#user">User</a></li><li><a href="#profile">Profile</a></li><li><a href="#post">Post</a></li><li><a href="#comment">Comment</a></li><li><a href="#category">Category</a></li><li><a href="#tag">Tag</a></li><li><a href="#role">Role</a></li><li><a href="#userrole">UserRole</a></li></ul><h1 id="er-diagram" tabindex="-1">ER diagram <a class="header-anchor" href="#er-diagram" aria-label="Permalink to &quot;ER diagram&quot;">​</a></h1><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>@startuml erd</span></span>
+<span class="line"><span>skinparam linetype ortho</span></span>
+<span class="line"><span>entity &quot;User&quot; as User {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * email : [UK] String</span></span>
+<span class="line"><span>  name : String</span></span>
+<span class="line"><span>  * createdAt : DateTime</span></span>
+<span class="line"><span>  * updatedAt : DateTime</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Profile&quot; as Profile {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  bio : String</span></span>
+<span class="line"><span>  # userId : [UK] [FK] User</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Post&quot; as Post {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * title : String</span></span>
+<span class="line"><span>  content : String</span></span>
+<span class="line"><span>  * published : Boolean</span></span>
+<span class="line"><span>  # authorId : [FK] User</span></span>
+<span class="line"><span>  * createdAt : DateTime</span></span>
+<span class="line"><span>  * updatedAt : DateTime</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Comment&quot; as Comment {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * content : String</span></span>
+<span class="line"><span>  # postId : [FK] Post</span></span>
+<span class="line"><span>  # authorId : [FK] User</span></span>
+<span class="line"><span>  * createdAt : DateTime</span></span>
+<span class="line"><span>  * updatedAt : DateTime</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Category&quot; as Category {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * name : [UK] String</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Tag&quot; as Tag {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * name : [UK] String</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Role&quot; as Role {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * name : [UK] String</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;UserRole&quot; as UserRole {</span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  # userId : [FK] User</span></span>
+<span class="line"><span>  # roleId : [FK] Role</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&#39; Relations</span></span>
+<span class="line"><span>Profile |o--|| User: userId</span></span>
+<span class="line"><span>Post }o--|| User: authorId</span></span>
+<span class="line"><span>Comment }o--|| Post: postId</span></span>
+<span class="line"><span>Comment }o--|| User: authorId</span></span>
+<span class="line"><span>UserRole }o--|| User: userId</span></span>
+<span class="line"><span>UserRole }o--|| Role: roleId</span></span>
+<span class="line"><span>&#39; ManyToMany Relations</span></span>
+<span class="line"><span>Post }o--o{ Category</span></span>
+<span class="line"><span>Post }o--o{ Tag</span></span>
+<span class="line"><span>&#39; enum relations</span></span>
+<span class="line"><span>@enduml</span></span></code></pre></div><h1 id="user" tabindex="-1">User <a class="header-anchor" href="#user" aria-label="Permalink to &quot;User&quot;">​</a></h1><h2 id="description" tabindex="-1">Description <a class="header-anchor" href="#description" aria-label="Permalink to &quot;Description&quot;">​</a></h2><h2 id="columns" tabindex="-1">Columns <a class="header-anchor" href="#columns" aria-label="Permalink to &quot;Columns&quot;">​</a></h2><table tabindex="0"><thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Nullable</th><th>Unique</th><th>Children</th><th>Parent</th><th>Comment</th></tr></thead><tbody><tr><td>id</td><td>Int</td><td>autoincrement</td><td>false</td><td>true</td><td><a href="#profile">Profile</a>, <a href="#post">Post</a>, <a href="#comment">Comment</a>, <a href="#userrole">UserRole</a></td><td></td><td></td></tr><tr><td>email</td><td>String</td><td></td><td>false</td><td>true</td><td></td><td></td><td></td></tr><tr><td>name</td><td>String</td><td></td><td>true</td><td>false</td><td></td><td></td><td></td></tr><tr><td>createdAt</td><td>DateTime</td><td>now</td><td>false</td><td>false</td><td></td><td></td><td></td></tr><tr><td>updatedAt</td><td>DateTime</td><td></td><td>false</td><td>false</td><td></td><td></td><td></td></tr></tbody></table><h2 id="er-diagram-1" tabindex="-1">ER diagram <a class="header-anchor" href="#er-diagram-1" aria-label="Permalink to &quot;ER diagram&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>@startuml User</span></span>
+<span class="line"><span>skinparam linetype ortho</span></span>
+<span class="line"><span>entity &quot;User&quot; as User {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * email : [UK] String</span></span>
+<span class="line"><span>  name : String</span></span>
+<span class="line"><span>  * createdAt : DateTime</span></span>
+<span class="line"><span>  * updatedAt : DateTime</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Profile&quot; as Profile {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  bio : String</span></span>
+<span class="line"><span>  # userId : [UK] [FK] User</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Post&quot; as Post {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * title : String</span></span>
+<span class="line"><span>  content : String</span></span>
+<span class="line"><span>  * published : Boolean</span></span>
+<span class="line"><span>  # authorId : [FK] User</span></span>
+<span class="line"><span>  * createdAt : DateTime</span></span>
+<span class="line"><span>  * updatedAt : DateTime</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Comment&quot; as Comment {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * content : String</span></span>
+<span class="line"><span>  # postId : [FK] Post</span></span>
+<span class="line"><span>  # authorId : [FK] User</span></span>
+<span class="line"><span>  * createdAt : DateTime</span></span>
+<span class="line"><span>  * updatedAt : DateTime</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;UserRole&quot; as UserRole {</span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  # userId : [FK] User</span></span>
+<span class="line"><span>  # roleId : [FK] Role</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&#39; Relations</span></span>
+<span class="line"><span>Profile |o--|| User: userId</span></span>
+<span class="line"><span>Post }o--|| User: authorId</span></span>
+<span class="line"><span>Comment }o--|| Post: postId</span></span>
+<span class="line"><span>Comment }o--|| User: authorId</span></span>
+<span class="line"><span>UserRole }o--|| User: userId</span></span>
+<span class="line"><span>&#39; ManyToMany Relations</span></span>
+<span class="line"><span>&#39; enum relations</span></span>
+<span class="line"><span>@enduml</span></span></code></pre></div><h1 id="profile" tabindex="-1">Profile <a class="header-anchor" href="#profile" aria-label="Permalink to &quot;Profile&quot;">​</a></h1><h2 id="description-1" tabindex="-1">Description <a class="header-anchor" href="#description-1" aria-label="Permalink to &quot;Description&quot;">​</a></h2><h2 id="columns-1" tabindex="-1">Columns <a class="header-anchor" href="#columns-1" aria-label="Permalink to &quot;Columns&quot;">​</a></h2><table tabindex="0"><thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Nullable</th><th>Unique</th><th>Children</th><th>Parent</th><th>Comment</th></tr></thead><tbody><tr><td>id</td><td>Int</td><td>autoincrement</td><td>false</td><td>true</td><td></td><td></td><td></td></tr><tr><td>bio</td><td>String</td><td></td><td>true</td><td>false</td><td></td><td></td><td></td></tr><tr><td>userId</td><td>Int</td><td></td><td>false</td><td>true</td><td></td><td><a href="#user">User</a></td><td></td></tr></tbody></table><h2 id="er-diagram-2" tabindex="-1">ER diagram <a class="header-anchor" href="#er-diagram-2" aria-label="Permalink to &quot;ER diagram&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>@startuml Profile</span></span>
+<span class="line"><span>skinparam linetype ortho</span></span>
+<span class="line"><span>entity &quot;User&quot; as User {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * email : [UK] String</span></span>
+<span class="line"><span>  name : String</span></span>
+<span class="line"><span>  * createdAt : DateTime</span></span>
+<span class="line"><span>  * updatedAt : DateTime</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Profile&quot; as Profile {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  bio : String</span></span>
+<span class="line"><span>  # userId : [UK] [FK] User</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&#39; Relations</span></span>
+<span class="line"><span>Profile |o--|| User: userId</span></span>
+<span class="line"><span>&#39; ManyToMany Relations</span></span>
+<span class="line"><span>&#39; enum relations</span></span>
+<span class="line"><span>@enduml</span></span></code></pre></div><h1 id="post" tabindex="-1">Post <a class="header-anchor" href="#post" aria-label="Permalink to &quot;Post&quot;">​</a></h1><h2 id="description-2" tabindex="-1">Description <a class="header-anchor" href="#description-2" aria-label="Permalink to &quot;Description&quot;">​</a></h2><h2 id="columns-2" tabindex="-1">Columns <a class="header-anchor" href="#columns-2" aria-label="Permalink to &quot;Columns&quot;">​</a></h2><table tabindex="0"><thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Nullable</th><th>Unique</th><th>Children</th><th>Parent</th><th>Comment</th></tr></thead><tbody><tr><td>id</td><td>Int</td><td>autoincrement</td><td>false</td><td>true</td><td><a href="#comment">Comment</a></td><td></td><td></td></tr><tr><td>title</td><td>String</td><td></td><td>false</td><td>false</td><td></td><td></td><td></td></tr><tr><td>content</td><td>String</td><td></td><td>true</td><td>false</td><td></td><td></td><td></td></tr><tr><td>published</td><td>Boolean</td><td></td><td>false</td><td>false</td><td></td><td></td><td></td></tr><tr><td>authorId</td><td>Int</td><td></td><td>false</td><td>false</td><td></td><td><a href="#user">User</a></td><td></td></tr><tr><td>createdAt</td><td>DateTime</td><td>now</td><td>false</td><td>false</td><td></td><td></td><td></td></tr><tr><td>updatedAt</td><td>DateTime</td><td></td><td>false</td><td>false</td><td></td><td></td><td></td></tr></tbody></table><h2 id="er-diagram-3" tabindex="-1">ER diagram <a class="header-anchor" href="#er-diagram-3" aria-label="Permalink to &quot;ER diagram&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>@startuml Post</span></span>
+<span class="line"><span>skinparam linetype ortho</span></span>
+<span class="line"><span>entity &quot;User&quot; as User {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * email : [UK] String</span></span>
+<span class="line"><span>  name : String</span></span>
+<span class="line"><span>  * createdAt : DateTime</span></span>
+<span class="line"><span>  * updatedAt : DateTime</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Post&quot; as Post {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * title : String</span></span>
+<span class="line"><span>  content : String</span></span>
+<span class="line"><span>  * published : Boolean</span></span>
+<span class="line"><span>  # authorId : [FK] User</span></span>
+<span class="line"><span>  * createdAt : DateTime</span></span>
+<span class="line"><span>  * updatedAt : DateTime</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Comment&quot; as Comment {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * content : String</span></span>
+<span class="line"><span>  # postId : [FK] Post</span></span>
+<span class="line"><span>  # authorId : [FK] User</span></span>
+<span class="line"><span>  * createdAt : DateTime</span></span>
+<span class="line"><span>  * updatedAt : DateTime</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Category&quot; as Category {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * name : [UK] String</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Tag&quot; as Tag {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * name : [UK] String</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&#39; Relations</span></span>
+<span class="line"><span>Post }o--|| User: authorId</span></span>
+<span class="line"><span>Comment }o--|| Post: postId</span></span>
+<span class="line"><span>Comment }o--|| User: authorId</span></span>
+<span class="line"><span>&#39; ManyToMany Relations</span></span>
+<span class="line"><span>Post }o--o{ Category</span></span>
+<span class="line"><span>Post }o--o{ Tag</span></span>
+<span class="line"><span>&#39; enum relations</span></span>
+<span class="line"><span>@enduml</span></span></code></pre></div><h1 id="comment" tabindex="-1">Comment <a class="header-anchor" href="#comment" aria-label="Permalink to &quot;Comment&quot;">​</a></h1><h2 id="description-3" tabindex="-1">Description <a class="header-anchor" href="#description-3" aria-label="Permalink to &quot;Description&quot;">​</a></h2><h2 id="columns-3" tabindex="-1">Columns <a class="header-anchor" href="#columns-3" aria-label="Permalink to &quot;Columns&quot;">​</a></h2><table tabindex="0"><thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Nullable</th><th>Unique</th><th>Children</th><th>Parent</th><th>Comment</th></tr></thead><tbody><tr><td>id</td><td>Int</td><td>autoincrement</td><td>false</td><td>true</td><td></td><td></td><td></td></tr><tr><td>content</td><td>String</td><td></td><td>false</td><td>false</td><td></td><td></td><td></td></tr><tr><td>postId</td><td>Int</td><td></td><td>false</td><td>false</td><td></td><td><a href="#post">Post</a></td><td></td></tr><tr><td>authorId</td><td>Int</td><td></td><td>false</td><td>false</td><td></td><td><a href="#user">User</a></td><td></td></tr><tr><td>createdAt</td><td>DateTime</td><td>now</td><td>false</td><td>false</td><td></td><td></td><td></td></tr><tr><td>updatedAt</td><td>DateTime</td><td></td><td>false</td><td>false</td><td></td><td></td><td></td></tr></tbody></table><h2 id="er-diagram-4" tabindex="-1">ER diagram <a class="header-anchor" href="#er-diagram-4" aria-label="Permalink to &quot;ER diagram&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>@startuml Comment</span></span>
+<span class="line"><span>skinparam linetype ortho</span></span>
+<span class="line"><span>entity &quot;User&quot; as User {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * email : [UK] String</span></span>
+<span class="line"><span>  name : String</span></span>
+<span class="line"><span>  * createdAt : DateTime</span></span>
+<span class="line"><span>  * updatedAt : DateTime</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Post&quot; as Post {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * title : String</span></span>
+<span class="line"><span>  content : String</span></span>
+<span class="line"><span>  * published : Boolean</span></span>
+<span class="line"><span>  # authorId : [FK] User</span></span>
+<span class="line"><span>  * createdAt : DateTime</span></span>
+<span class="line"><span>  * updatedAt : DateTime</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Comment&quot; as Comment {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * content : String</span></span>
+<span class="line"><span>  # postId : [FK] Post</span></span>
+<span class="line"><span>  # authorId : [FK] User</span></span>
+<span class="line"><span>  * createdAt : DateTime</span></span>
+<span class="line"><span>  * updatedAt : DateTime</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&#39; Relations</span></span>
+<span class="line"><span>Post }o--|| User: authorId</span></span>
+<span class="line"><span>Comment }o--|| Post: postId</span></span>
+<span class="line"><span>Comment }o--|| User: authorId</span></span>
+<span class="line"><span>&#39; ManyToMany Relations</span></span>
+<span class="line"><span>&#39; enum relations</span></span>
+<span class="line"><span>@enduml</span></span></code></pre></div><h1 id="category" tabindex="-1">Category <a class="header-anchor" href="#category" aria-label="Permalink to &quot;Category&quot;">​</a></h1><h2 id="description-4" tabindex="-1">Description <a class="header-anchor" href="#description-4" aria-label="Permalink to &quot;Description&quot;">​</a></h2><h2 id="columns-4" tabindex="-1">Columns <a class="header-anchor" href="#columns-4" aria-label="Permalink to &quot;Columns&quot;">​</a></h2><table tabindex="0"><thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Nullable</th><th>Unique</th><th>Children</th><th>Parent</th><th>Comment</th></tr></thead><tbody><tr><td>id</td><td>Int</td><td>autoincrement</td><td>false</td><td>true</td><td></td><td></td><td></td></tr><tr><td>name</td><td>String</td><td></td><td>false</td><td>true</td><td></td><td></td><td></td></tr></tbody></table><h2 id="er-diagram-5" tabindex="-1">ER diagram <a class="header-anchor" href="#er-diagram-5" aria-label="Permalink to &quot;ER diagram&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>@startuml Category</span></span>
+<span class="line"><span>skinparam linetype ortho</span></span>
+<span class="line"><span>entity &quot;Post&quot; as Post {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * title : String</span></span>
+<span class="line"><span>  content : String</span></span>
+<span class="line"><span>  * published : Boolean</span></span>
+<span class="line"><span>  # authorId : [FK] User</span></span>
+<span class="line"><span>  * createdAt : DateTime</span></span>
+<span class="line"><span>  * updatedAt : DateTime</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Category&quot; as Category {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * name : [UK] String</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&#39; Relations</span></span>
+<span class="line"><span>&#39; ManyToMany Relations</span></span>
+<span class="line"><span>Post }o--o{ Category</span></span>
+<span class="line"><span>&#39; enum relations</span></span>
+<span class="line"><span>@enduml</span></span></code></pre></div><h1 id="tag" tabindex="-1">Tag <a class="header-anchor" href="#tag" aria-label="Permalink to &quot;Tag&quot;">​</a></h1><h2 id="description-5" tabindex="-1">Description <a class="header-anchor" href="#description-5" aria-label="Permalink to &quot;Description&quot;">​</a></h2><h2 id="columns-5" tabindex="-1">Columns <a class="header-anchor" href="#columns-5" aria-label="Permalink to &quot;Columns&quot;">​</a></h2><table tabindex="0"><thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Nullable</th><th>Unique</th><th>Children</th><th>Parent</th><th>Comment</th></tr></thead><tbody><tr><td>id</td><td>Int</td><td>autoincrement</td><td>false</td><td>true</td><td></td><td></td><td></td></tr><tr><td>name</td><td>String</td><td></td><td>false</td><td>true</td><td></td><td></td><td></td></tr></tbody></table><h2 id="er-diagram-6" tabindex="-1">ER diagram <a class="header-anchor" href="#er-diagram-6" aria-label="Permalink to &quot;ER diagram&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>@startuml Tag</span></span>
+<span class="line"><span>skinparam linetype ortho</span></span>
+<span class="line"><span>entity &quot;Post&quot; as Post {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * title : String</span></span>
+<span class="line"><span>  content : String</span></span>
+<span class="line"><span>  * published : Boolean</span></span>
+<span class="line"><span>  # authorId : [FK] User</span></span>
+<span class="line"><span>  * createdAt : DateTime</span></span>
+<span class="line"><span>  * updatedAt : DateTime</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Tag&quot; as Tag {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * name : [UK] String</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&#39; Relations</span></span>
+<span class="line"><span>&#39; ManyToMany Relations</span></span>
+<span class="line"><span>Post }o--o{ Tag</span></span>
+<span class="line"><span>&#39; enum relations</span></span>
+<span class="line"><span>@enduml</span></span></code></pre></div><h1 id="role" tabindex="-1">Role <a class="header-anchor" href="#role" aria-label="Permalink to &quot;Role&quot;">​</a></h1><h2 id="description-6" tabindex="-1">Description <a class="header-anchor" href="#description-6" aria-label="Permalink to &quot;Description&quot;">​</a></h2><h2 id="columns-6" tabindex="-1">Columns <a class="header-anchor" href="#columns-6" aria-label="Permalink to &quot;Columns&quot;">​</a></h2><table tabindex="0"><thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Nullable</th><th>Unique</th><th>Children</th><th>Parent</th><th>Comment</th></tr></thead><tbody><tr><td>id</td><td>Int</td><td>autoincrement</td><td>false</td><td>true</td><td><a href="#userrole">UserRole</a></td><td></td><td></td></tr><tr><td>name</td><td>String</td><td></td><td>false</td><td>true</td><td></td><td></td><td></td></tr></tbody></table><h2 id="er-diagram-7" tabindex="-1">ER diagram <a class="header-anchor" href="#er-diagram-7" aria-label="Permalink to &quot;ER diagram&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>@startuml Role</span></span>
+<span class="line"><span>skinparam linetype ortho</span></span>
+<span class="line"><span>entity &quot;Role&quot; as Role {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * name : [UK] String</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;UserRole&quot; as UserRole {</span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  # userId : [FK] User</span></span>
+<span class="line"><span>  # roleId : [FK] Role</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&#39; Relations</span></span>
+<span class="line"><span>UserRole }o--|| Role: roleId</span></span>
+<span class="line"><span>&#39; ManyToMany Relations</span></span>
+<span class="line"><span>&#39; enum relations</span></span>
+<span class="line"><span>@enduml</span></span></code></pre></div><h1 id="userrole" tabindex="-1">UserRole <a class="header-anchor" href="#userrole" aria-label="Permalink to &quot;UserRole&quot;">​</a></h1><h2 id="description-7" tabindex="-1">Description <a class="header-anchor" href="#description-7" aria-label="Permalink to &quot;Description&quot;">​</a></h2><h2 id="columns-7" tabindex="-1">Columns <a class="header-anchor" href="#columns-7" aria-label="Permalink to &quot;Columns&quot;">​</a></h2><table tabindex="0"><thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Nullable</th><th>Unique</th><th>Children</th><th>Parent</th><th>Comment</th></tr></thead><tbody><tr><td>userId</td><td>Int</td><td></td><td>false</td><td>false</td><td></td><td><a href="#user">User</a></td><td></td></tr><tr><td>roleId</td><td>Int</td><td></td><td>false</td><td>false</td><td></td><td><a href="#role">Role</a></td><td></td></tr></tbody></table><h2 id="er-diagram-8" tabindex="-1">ER diagram <a class="header-anchor" href="#er-diagram-8" aria-label="Permalink to &quot;ER diagram&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>@startuml UserRole</span></span>
+<span class="line"><span>skinparam linetype ortho</span></span>
+<span class="line"><span>entity &quot;User&quot; as User {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * email : [UK] String</span></span>
+<span class="line"><span>  name : String</span></span>
+<span class="line"><span>  * createdAt : DateTime</span></span>
+<span class="line"><span>  * updatedAt : DateTime</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;Role&quot; as Role {</span></span>
+<span class="line"><span>+ id [PK] : Int </span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  * name : [UK] String</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>entity &quot;UserRole&quot; as UserRole {</span></span>
+<span class="line"><span>--</span></span>
+<span class="line"><span>  # userId : [FK] User</span></span>
+<span class="line"><span>  # roleId : [FK] Role</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&#39; Relations</span></span>
+<span class="line"><span>UserRole }o--|| User: userId</span></span>
+<span class="line"><span>UserRole }o--|| Role: roleId</span></span>
+<span class="line"><span>&#39; ManyToMany Relations</span></span>
+<span class="line"><span>&#39; enum relations</span></span>
+<span class="line"><span>@enduml</span></span></code></pre></div></details><h2 id="options" tabindex="-1">Options <a class="header-anchor" href="#options" aria-label="Permalink to &quot;Options&quot;">​</a></h2><h3 id="exportpertables" tabindex="-1">exportPerTables <a class="header-anchor" href="#exportpertables" aria-label="Permalink to &quot;exportPerTables&quot;">​</a></h3><p> 各テーブルが出力される。デフォルト値は<code>false</code>。</p><h3 id="showuniquekeylabel" tabindex="-1">showUniqueKeyLabel <a class="header-anchor" href="#showuniquekeylabel" aria-label="Permalink to &quot;showUniqueKeyLabel&quot;">​</a></h3><p> <code>ER</code>図上で一意のキーとしてもラベル付けされる<code>[UK]</code>。デフォルト値は<code>false</code>。</p><h3 id="linetype" tabindex="-1">lineType <a class="header-anchor" href="#linetype" aria-label="Permalink to &quot;lineType&quot;">​</a></h3><ul><li>ortho</li><li>polyline</li><li>unset</li></ul><p>デフォルト値は<code>ortho</code>。</p><h3 id="islefttorightdirection" tabindex="-1">isLeftToRightDirection <a class="header-anchor" href="#islefttorightdirection" aria-label="Permalink to &quot;isLeftToRightDirection&quot;">​</a></h3><p> <code>true</code>にすると、<code>PlantUML</code>が<code>left to right direction</code>指定される。</p><h3 id="linelength" tabindex="-1">lineLength <a class="header-anchor" href="#linelength" aria-label="Permalink to &quot;lineLength&quot;">​</a></h3><p> 線の長さを変更できる。デフォルト値は<code>--</code>。</p></div></div></main><footer class="VPDocFooter" data-v-e6f2a212 data-v-1bcd8184><!--[--><!--]--><!----><nav class="prev-next" aria-labelledby="doc-footer-aria-label" data-v-1bcd8184><span class="visually-hidden" id="doc-footer-aria-label" data-v-1bcd8184>Pager</span><div class="pager" data-v-1bcd8184><a class="VPLink link pager-link prev" href="/blog/posts/2024/09/06.html" data-v-1bcd8184><!--[--><span class="desc" data-v-1bcd8184>Previous page</span><span class="title" data-v-1bcd8184>Bun React</span><!--]--></a></div><div class="pager" data-v-1bcd8184><a class="VPLink link pager-link next" href="/blog/posts/2024/09/09.html" data-v-1bcd8184><!--[--><span class="desc" data-v-1bcd8184>Next page</span><span class="title" data-v-1bcd8184>Bun React</span><!--]--></a></div></nav></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><footer class="VPFooter has-sidebar" data-v-d8b57b2d data-v-566314d4><div class="container" data-v-566314d4><!----><p class="copyright" data-v-566314d4>© nakita-ypm.github.io/blog</p></div></footer><!--[--><!--]--></div></div>
+    <script>window.__VP_HASH_MAP__=JSON.parse("{\"about_index.md\":\"CGXeuN1Z\",\"index.md\":\"BpdaxqjF\",\"posts_2023_03_20.md\":\"KpMX5qgh\",\"posts_2023_09_18.md\":\"D3zyMt2W\",\"posts_2023_12_28.md\":\"BoxfVxKU\",\"posts_2024_02_10.md\":\"Z3ZHEPAq\",\"posts_2024_05_01.md\":\"iC0ir04Y\",\"posts_2024_06_27.md\":\"BmZ6C778\",\"posts_2024_07_21.md\":\"IF14JmHE\",\"posts_2024_07_23.md\":\"BuFy3_ji\",\"posts_2024_07_24.md\":\"DlwgjAfS\",\"posts_2024_07_26.md\":\"CbE3sIwG\",\"posts_2024_07_28.md\":\"DGNIKbyO\",\"posts_2024_07_30.md\":\"CqtVdRlw\",\"posts_2024_07_31.md\":\"bSelCPT8\",\"posts_2024_08_07.md\":\"B5ZT8cFJ\",\"posts_2024_08_08.md\":\"BaXOf68T\",\"posts_2024_08_09.md\":\"BuYbvDDV\",\"posts_2024_08_10.md\":\"DUw7B8x2\",\"posts_2024_08_12.md\":\"BqNLG08E\",\"posts_2024_08_25.md\":\"DRMJgjro\",\"posts_2024_08_28.md\":\"B2denHBm\",\"posts_2024_09_01.md\":\"DulfmKlp\",\"posts_2024_09_02.md\":\"ic9Be6sF\",\"posts_2024_09_05.md\":\"DTDGD37U\",\"posts_2024_09_06.md\":\"CQRIfSbp\",\"posts_2024_09_08.md\":\"vWJQMugd\",\"posts_2024_09_09.md\":\"ConQ52Yg\",\"posts_2024_09_10.md\":\"4thayloq\",\"posts_2024_09_11.md\":\"BodHrq5a\",\"posts_2024_09_24.md\":\"AB375thq\",\"posts_2024_09_25.md\":\"Dfrj4Ybm\",\"posts_2024_10_02.md\":\"Dk1PQzbU\",\"posts_2024_10_03.md\":\"Bshds9jC\",\"posts_2024_10_04.md\":\"B4CGoXZw\",\"posts_2024_10_05.md\":\"CvI_sUtj\",\"posts_2024_10_06.md\":\"PBC9Acmg\",\"posts_2024_10_10.md\":\"CMLXpO-I\",\"posts_2024_10_13.md\":\"D8fYRMfl\",\"posts_2024_10_14.md\":\"H0O2ZU6K\",\"posts_2024_10_15.md\":\"ChB6Jglg\",\"posts_2024_10_17.md\":\"cdMLrRk1\",\"posts_2024_10_18.md\":\"BNGttkGP\",\"posts_2024_10_22.md\":\"CfK3O3sw\",\"posts_2024_10_25.md\":\"Bshd892k\",\"posts_2024_10_26.md\":\"s4wmdB_v\",\"posts_2024_11_01.md\":\"D045Y8n_\",\"posts_2024_11_02.md\":\"CjoDy3fP\",\"posts_2024_11_06.md\":\"CJjM6AQm\",\"posts_2024_11_07.md\":\"CKuT74aw\",\"posts_2024_11_08.md\":\"BaLA0hAB\",\"posts_2024_11_09.md\":\"qRDLUbrU\",\"posts_2024_11_10.md\":\"qOjJuQJ5\",\"posts_2024_11_11.md\":\"BRum1Z22\",\"posts_2024_11_12.md\":\"BSiej60l\",\"posts_2024_11_13.md\":\"DSC2FrLv\",\"posts_2024_11_14.md\":\"B3VkXg1P\",\"posts_2024_11_15.md\":\"xR6qjGTv\",\"posts_2024_11_19.md\":\"DE0HwajH\",\"posts_2024_11_22.md\":\"D-cuo93S\",\"posts_2024_11_23.md\":\"C7c03Kqw\",\"posts_2024_11_24.md\":\"BnIqS1nq\",\"posts_2024_11_26.md\":\"Cld1TV0M\",\"posts_2024_11_27.md\":\"DLu5JKge\",\"posts_2024_11_28.md\":\"B0ywilHH\",\"posts_2024_11_29.md\":\"DZxvM5IP\",\"posts_2024_12_16.md\":\"CX53TUop\",\"posts_2024_12_19.md\":\"CvqlwYdY\",\"posts_2025_01_06.md\":\"D9rvTP1u\",\"posts_2025_01_07.md\":\"CO4PgL1I\",\"posts_2025_01_28.md\":\"Dn1sDiNM\",\"posts_2025_01_30.md\":\"vpwun2E0\",\"posts_2025_02_03.md\":\"0mHZP02I\",\"posts_2025_03_12.md\":\"DWJmjVF5\",\"posts_2025_03_13.md\":\"DlX6Axk9\",\"posts_2025_03_16.md\":\"D5WCYxr5\",\"posts_2025_04_06.md\":\"CzUl6CjP\",\"posts_2025_04_13.md\":\"vg7fsV0d\",\"posts_2025_04_14.md\":\"BJcUpEox\",\"posts_2025_04_15.md\":\"XRyisS5t\",\"posts_2025_04_16.md\":\"D5_zV_yd\",\"posts_2025_04_19.md\":\"lH5XzGUR\",\"posts_2025_04_20.md\":\"CLXZOo2p\",\"posts_2025_04_21.md\":\"CqWluOhG\",\"posts_2025_04_22.md\":\"DBt3vbnD\",\"posts_2025_04_23.md\":\"dk6YNAjG\",\"posts_2025_04_24.md\":\"CAP9BGYx\",\"posts_2025_04_25.md\":\"DjY56twl\",\"posts_2025_04_26.md\":\"BpOLt1n5\",\"posts_2025_04_27.md\":\"CiUlRI1v\",\"posts_2025_04_28.md\":\"DD1Ywow_\",\"posts_2025_07_01.md\":\"7RtCm640\",\"posts_2025_07_21.md\":\"Ct2VVW1S\",\"posts_2025_09_13.md\":\"Dqr7YKRt\",\"posts_2025_09_14.md\":\"DXWs5JAf\",\"posts_2025_09_17.md\":\"BpVaq5r2\",\"posts_2025_09_18.md\":\"ZfyN2Inu\",\"posts_2025_09_19.md\":\"8VfqVDGV\",\"posts_page_1.md\":\"DduA9bBA\",\"posts_page_2.md\":\"B6KXgAlC\",\"posts_page_3.md\":\"CnOhkimq\",\"posts_page_4.md\":\"B8xl4Q-X\",\"posts_page_5.md\":\"qJ4cPbX5\",\"readme.md\":\"CkSYgTDs\",\"tags_astro_page_1.md\":\"B8Mgjjj_\",\"tags_biome_page_1.md\":\"CMrHWxzS\",\"tags_bun_page_1.md\":\"CEpDMexA\",\"tags_clean architecture_page_1.md\":\"AK0SWLFx\",\"tags_cloudflare workers_page_1.md\":\"DR_qHweG\",\"tags_cors_page_1.md\":\"al6-fRlA\",\"tags_date_page_1.md\":\"hYwDPAQQ\",\"tags_deno_page_1.md\":\"Bg8F7IbF\",\"tags_docker_page_1.md\":\"B7N7VLR6\",\"tags_drizzle_page_1.md\":\"CMT2qGZA\",\"tags_dvorak_page_1.md\":\"CJMSTyiS\",\"tags_elixir_page_1.md\":\"Cix9NtE7\",\"tags_event_page_1.md\":\"C0FyFlzs\",\"tags_express_page_1.md\":\"BEI3QeSB\",\"tags_git_page_1.md\":\"-kGqjmfG\",\"tags_hono-takibi_page_1.md\":\"C4LBT_7v\",\"tags_hono_page_1.md\":\"M5t_DaKw\",\"tags_honox_page_1.md\":\"BkRI-CmG\",\"tags_index.md\":\"nbj4Ziy1\",\"tags_json_page_1.md\":\"uSZD7eR2\",\"tags_keyboard_page_1.md\":\"BsuPZDZL\",\"tags_map_page_1.md\":\"CL9ygs1U\",\"tags_middleware_page_1.md\":\"BS-Qi3zq\",\"tags_mongodb_page_1.md\":\"3BAr6TW6\",\"tags_monorepo_page_1.md\":\"CHVYhFtj\",\"tags_mysql_page_1.md\":\"CsbMTeX9\",\"tags_next_page_1.md\":\"Cqa0zlQp\",\"tags_npm_page_1.md\":\"BA-NlE0p\",\"tags_object_page_1.md\":\"5XvzZIdD\",\"tags_openapi_page_1.md\":\"BuYbCLXx\",\"tags_panda css_page_1.md\":\"CIgjr5GQ\",\"tags_phoenix_page_1.md\":\"C7iPrAWQ\",\"tags_pnpm_page_1.md\":\"BD9IAWVo\",\"tags_prisma_page_1.md\":\"BXvA0-1L\",\"tags_prittier_page_1.md\":\"6vuynswn\",\"tags_react_page_1.md\":\"Bzq5AOM7\",\"tags_reduce_page_1.md\":\"CrpfBEyb\",\"tags_remix_page_1.md\":\"BJxvCueQ\",\"tags_rpc_page_1.md\":\"BhQULKzu\",\"tags_slidev_page_1.md\":\"CnnjB4eA\",\"tags_sqlite_page_1.md\":\"DqglWGJn\",\"tags_storybook_page_1.md\":\"CV-WnnO8\",\"tags_svelte_page_1.md\":\"C4wEISi8\",\"tags_swagger_page_1.md\":\"Bo5db-Op\",\"tags_tanstack router_page_1.md\":\"DgCyndMx\",\"tags_tsyringe_page_1.md\":\"BHQuJuSF\",\"tags_typedoc_page_1.md\":\"4gTFqByu\",\"tags_typescript_page_1.md\":\"DRCZzl-v\",\"tags_valibot_page_1.md\":\"CMPIKDCE\",\"tags_validator_page_1.md\":\"3DLdSoPq\",\"tags_vitepress_page_1.md\":\"7X0vtqSu\",\"tags_vue_page_1.md\":\"DYwYfdGG\",\"tags_workspace_page_1.md\":\"C73dOtIn\",\"tags_yapc_page_1.md\":\"CICMoubV\",\"tags_yarn_page_1.md\":\"CsIbB01I\",\"tags_zod openapi_page_1.md\":\"3zLT8l5W\",\"tags_zod_page_1.md\":\"CRJBOgud\",\"tags_zodios_page_1.md\":\"CgPfbQ4H\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"en-US\",\"dir\":\"ltr\",\"title\":\"N Akita's Blog\",\"description\":\"N Akita's Blog\",\"base\":\"/blog/\",\"head\":[],\"router\":{\"prefetchLinks\":true},\"appearance\":\"force-dark\",\"themeConfig\":{\"nav\":[{\"text\":\"Home\",\"link\":\"/\"},{\"text\":\"About\",\"link\":\"/about\"},{\"text\":\"Posts\",\"link\":\"/posts/page/1\"},{\"text\":\"Tags\",\"link\":\"/tags\"}],\"sidebar\":[{\"text\":\"Home\",\"link\":\"/\"},{\"text\":\"About\",\"link\":\"/about\"},{\"text\":\"Posts\",\"link\":\"/posts/page/1\"},{\"text\":\"Tags\",\"link\":\"/tags\"}],\"socialLinks\":[{\"icon\":\"github\",\"link\":\"https://github.com/nakita628\"},{\"icon\":\"npm\",\"link\":\"https://www.npmjs.com/~n_akita\"},{\"icon\":\"x\",\"link\":\"https://x.com/mini_bg_pro_N\"},{\"icon\":\"bluesky\",\"link\":\"https://bsky.app/profile/mini-bg-pro-n.bsky.social\"}],\"search\":{\"provider\":\"local\"},\"footer\":{\"copyright\":\"© nakita-ypm.github.io/blog\"}},\"locales\":{},\"scrollOffset\":134,\"cleanUrls\":false}");</script>
+    
+  </body>
+</html>
