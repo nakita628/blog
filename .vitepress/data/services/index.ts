@@ -13,16 +13,17 @@ export function parseFileToPost(filePath: string): Post {
   return buildPost({ title, description, date, tags }, link)
 }
 
-export function getAllMarkdownFiles(): `${string}.md`[] {
-  const readDirectory = (directory: string): `${string}.md`[] => {
-    const entries = fs.readdirSync(directory, { withFileTypes: true })
-    return entries.flatMap((entry): `${string}.md`[] => {
-      const fullPath = path.join(directory, entry.name)
-      if (entry.isDirectory()) {
-        return readDirectory(fullPath)
-      }
-      return fileFilter(entry.name) && isMarkdownFile(fullPath) ? [fullPath] : []
-    })
+export function getAllMarkdownFiles(): readonly `${string}.md`[] {
+  const readDirectory = (directory: string): readonly `${string}.md`[] => {
+    return fs
+      .readdirSync(directory, { withFileTypes: true })
+      .flatMap((entry): readonly `${string}.md`[] => {
+        const fullPath = path.join(directory, entry.name)
+        if (entry.isDirectory()) {
+          return readDirectory(fullPath)
+        }
+        return fileFilter(entry.name) && isMarkdownFile(fullPath) ? [fullPath] : []
+      })
   }
   return readDirectory(path.resolve(__dirname, '../../../posts'))
 }
