@@ -66,7 +66,7 @@ export default withMermaid(
         provider: 'local',
       },
       footer: {
-        copyright: '© nakita-ypm.github.io/blog',
+        copyright: '© nakita628.github.io/blog',
       },
     },
   }),
